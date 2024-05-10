@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Animation</title>
+<style>
+  body {
+    background: linear-gradient(to right, #FFD700, #FF8C00, #FF4500); /* Colorful gradient background */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    position: relative;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: move 1s linear infinite;
+  }
+  
+  @keyframes move {
+    0% { left: 0; }
+    100% { left: calc(100% - 100px); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
